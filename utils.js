@@ -13,7 +13,10 @@
         const suffix = colorMap?.[color]?.suffix || "_B";
         // Rimuoviamo spazi e slash per far combaciare il nome file
         const safeId = id.toString().trim().replace(/\//g, '-').replace(/\s+/g, '');
-        return `images/${safeId}${suffix}.png`;
+        
+        // Puntiamo al repository GitHub Pages per evitare di caricare le immagini su AI Studio
+        const baseUrl = "https://ilcovenant.github.io/SmcGoogleAiStudio";
+        return `${baseUrl}/images/${safeId}${suffix}.png`;
     };
 
     /**

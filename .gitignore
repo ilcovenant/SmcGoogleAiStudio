@@ -12,6 +12,15 @@ tsconfig.json
 vite.config.ts
 README.md
 
-# Storage temporaneo per caricamento a pacchetti
+# Ignore images to keep sync lightweight (managed manually on GitHub)
+images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.webp
+
+# Ignore temp folders
 temp_images/
 immagini_in_attesa/
