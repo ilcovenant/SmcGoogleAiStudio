@@ -1,0 +1,17 @@
+# Enforce binary handling for images to prevent corruption during sync
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+
+# Standard text handling for code
+*.html text
+*.css text
+*.js text
+*.jsx text
+*.json text
+*.csv text
+*.js.map binary
