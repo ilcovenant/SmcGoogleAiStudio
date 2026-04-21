@@ -5,21 +5,8 @@ coverage/
 .DS_Store
 *.log
 .env*
-metadata.json
-package.json
-package-lock.json
-tsconfig.json
-vite.config.ts
-README.md
-
 # Ignore images to keep sync lightweight (managed manually on GitHub)
 images/
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.ico
-*.webp
 
 # Ignore temp folders
 temp_images/

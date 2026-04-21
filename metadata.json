@@ -1,0 +1,7 @@
+{
+  "name": "SMC Catalogo",
+  "description": "Catalogo prodotti SMC Scribani con gestione preventivi e prezzi",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
