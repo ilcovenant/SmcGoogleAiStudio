@@ -8,3 +8,6 @@ coverage/
 metadata.json
 package.json
 package-lock.json
+tsconfig.json
+vite.config.ts
+README.md
