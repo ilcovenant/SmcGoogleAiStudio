@@ -1,0 +1,55 @@
+{
+  "name": "SMC Scribani S.r.l. - Catalogo",
+  "short_name": "SMC Catalogo",
+  "description": "Catalogo digitale dei componenti elettrici SMC: spine, adattatori e componenti TV.",
+  "lang": "it-IT",
+  "categories": ["business", "utilities", "shopping"],
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#00429d",
+  "theme_color": "#00429d",
+  "icons": [
+    {
+      "src": "./icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./screen1mobile.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "Schermata principale mobile SMC",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./screen1desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "label": "Visualizzazione desktop SMC",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMC Scribani S.r.l. - Catalogo Elettronico</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#00429d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SMC Catalogo">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="SMC Catalogo">
+    <link rel="apple-touch-icon" href="./icon-512.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@100;300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'smc-blue': '#00429d',
+                        'smc-red': '#e31e24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- React, ReactDOM, Babel e Framer Motion -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="products.js"></script>
+    <script src="utils.js"></script>
+</head>
+<body class="bg-slate-200 text-slate-900 selection:bg-smc-red selection:text-white">
+    <div id="root"></div>
+
+    <script type="text/javascript">
+        // Caricamento robusto di app.jsx per evitare errori di Babel Standalone in ambiente sandbox
+        fetch('./app.jsx')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(code => {
+                const transformed = Babel.transform(code, {
+                    presets: ['react'],
+                    filename: 'app.jsx'
+                }).code;
+                const script = document.createElement('script');
+                script.text = transformed;
+                document.body.appendChild(script);
+            })
+            .catch(error => {
+                console.error('Errore nel caricamento di app.jsx:', error);
+                const root = document.getElementById('root');
+                if (root) {
+                    root.innerHTML = `<div class="p-8 text-center"><h1 class="text-red-600 font-bold">Errore di caricamento</h1><p>${error.message}</p></div>`;
+                }
+            });
+    </script>
+</body>
+</html>

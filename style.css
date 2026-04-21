@@ -1,0 +1,20 @@
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+img { pointer-events: none; }
+.mask-fade-right { mask-image: linear-gradient(to right, black 85%, transparent 100%); }
+.selection\:bg-smc-red *::selection { background-color: #e31e24; color: white; }
+
+body {
+    background-color: #e2e8f0; /* slate-200 */
+    color: #0f172a; /* slate-900 */
+}
+
+.bg-checkerboard {
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                      linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 8px 8px;
+    background-position: 0 0, 0 4px, 4px 4px, 4px 0;
+    background-color: #fff;
+}
