@@ -8,6 +8,6 @@ coverage/
 # Ignore images to keep sync lightweight (managed manually on GitHub)
 images/
 
-# Ignore temp folders
+# Ignore temp folders (v2)
 temp_images/
 immagini_in_attesa/
