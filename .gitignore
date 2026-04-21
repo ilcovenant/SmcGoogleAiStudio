@@ -7,6 +7,10 @@ coverage/
 .env*
 # Ignore images to keep sync lightweight (managed manually on GitHub)
 images/
+logo.png
+icon-512.png
+screen1desktop.png
+screen1mobile.png
 
 # Ignore temp folders (v2)
 temp_images/
