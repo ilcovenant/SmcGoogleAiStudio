@@ -11,6 +11,7 @@ const ASSETS_TO_CACHE = [
   './screen1mobile.png',
   './screen1desktop.png',
   './manifest.json',
+  './Inventario - DB.csv',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@100;300;400;600;800;900&display=swap',
   'https://unpkg.com/react@18/umd/react.production.min.js',
   'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js',
@@ -18,7 +19,8 @@ const ASSETS_TO_CACHE = [
   'https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js',
   'https://unpkg.com/lucide@latest',
   'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js'
+  'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js'
 ];
 
 // Installazione: cache delle risorse statiche
