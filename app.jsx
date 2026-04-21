@@ -35,7 +35,6 @@ const ProductImage = React.memo(({ src, alt, className, id, loading = "lazy" }) 
                 className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                 onLoad={() => setIsLoaded(true)}
                 onError={handleError}
-                referrerPolicy="no-referrer"
                 loading={loading}
             />
         </div>

@@ -11,8 +11,9 @@
      */
     const getImageUrl = (id, color, colorMap = window.COLOR_MAP) => {
         const suffix = colorMap?.[color]?.suffix || "_B";
-        const safeId = id.replace(/\//g, '-');
-        return `./images/${safeId}${suffix}.png`;
+        // Rimuoviamo spazi e slash per far combaciare il nome file
+        const safeId = id.toString().trim().replace(/\//g, '-').replace(/\s+/g, '');
+        return `images/${safeId}${suffix}.png`;
     };
 
     /**
