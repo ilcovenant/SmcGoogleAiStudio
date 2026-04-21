@@ -1012,6 +1012,18 @@ function App() {
                                         id={product.id}
                                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 relative z-10"
                                     />
+
+                                    {/* Hover Badges */}
+                                    <div className="absolute top-2 left-2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+                                        <span className="bg-smc-blue text-white text-[9px] font-black uppercase tracking-wider px-2 py-1 shadow-md">
+                                            {product.cat}
+                                        </span>
+                                    </div>
+                                    <div className="absolute bottom-2 right-2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                                        <span className="bg-white border border-slate-200 text-slate-500 text-[9px] font-black uppercase tracking-wider px-2 py-1 shadow-md">
+                                            {product.sub}
+                                        </span>
+                                    </div>
                                 </div>
                                 
                                 <div 
